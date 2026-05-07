@@ -1,6 +1,7 @@
 import { generateContractTerms } from "$lib/generator/generateContractTerms";
 import { hiringHallPick } from "$lib/generator/hiringHallPick";
 import { offersPick } from "$lib/generator/offersPick";
+import { employerPick } from "$lib/generator/employerPick";
 import hiringHallData from "$lib/data/hiringHall.json"
 
 function randomInt(min: number, max: number): number {
@@ -18,8 +19,21 @@ export function generateContracts(
 
   const hall = hiringHallPick(hiringHallData.hiringHall, hiringHall)
   const offers = offersPick(hiringHallData.offersTable, hall.Offers)
+  let employerId = "";
 
   return Array.from({ length: offers.offers }, (_, index) => {
+    const employer = employerPick(hiringHallData.employers, hall.employers)
+      if(employer.id == "independent")
+      {
+        const independentEmployer = employerPick(hiringHallData.independentEmployers, hall.employers)
+        employerType = independentEmployer.label;
+        employerId = independentEmployer.id;
+      }
+      else
+      {
+        employerType = employer.label;
+        employerId = employer.id;
+      }
     const terms = generateContractTerms();
 
     return {

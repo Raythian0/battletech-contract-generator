@@ -1,0 +1,101 @@
+[
+  {
+    "step": 2,
+    "inner_sphere_clan": "Covert",
+    "independent": "Covert",
+    "corporation": "Covert",
+    "special": "Covert",
+    "covert": "Terrorism",
+    "pirate": "Recon Raid"
+  },
+  {
+    "step": 3,
+    "inner_sphere_clan": "Special",
+    "independent": "Special",
+    "corporation": "Covert",
+    "special": "Guerrilla",
+    "covert": "Assassination",
+    "pirate": "Recon Raid"
+  },
+  {
+    "step": 4,
+    "inner_sphere_clan": "Pirate Hunting",
+    "independent": "Planetary Assault",
+    "corporation": "Special",
+    "special": "Guerrilla",
+    "covert": "Assassination",
+    "pirate": "Recon Raid"
+  },
+  {
+    "step": 5,
+    "inner_sphere_clan": "Planetary Assault",
+    "independent": "Objective Raid",
+    "corporation": "Objective Raid",
+    "special": "Recon Raid",
+    "covert": "Espionage",
+    "pirate": "Recon Raid"
+  },
+  {
+    "step": 6,
+    "inner_sphere_clan": "Objective Raid",
+    "independent": "Extraction Raid",
+    "corporation": "Extraction Raid",
+    "special": "Extraction Raid",
+    "covert": "Sabatage",
+    "pirate": "Objective Raid"
+  },
+  {
+    "step": 7,
+    "inner_sphere_clan": "Objective Raid",
+    "independent": "Pirate Hunting",
+    "corporation": "Recon Raid",
+    "special": "Retainer",
+    "covert": "Guerrilla",
+    "pirate": "Objective Raid"
+  },
+  {
+    "step": 8,
+    "inner_sphere_clan": "Extraction Raid",
+    "independent": "Security Duty",
+    "corporation": "Objective Raid",
+    "special": "Recon Raid",
+    "covert": "Recon Raid",
+    "pirate": "Objective Raid"
+  },
+  {
+    "step": 9,
+    "inner_sphere_clan": "Recon Raid",
+    "independent": "Objective Raid",
+    "corporation": "Security Duty",
+    "special": "Relief Duty",
+    "covert": "Diversionary Raid",
+    "pirate": "Objective Raid"
+  },
+  {
+    "step": 10,
+    "inner_sphere_clan": "Garrison Duty",
+    "independent": "Garrison Duty",
+    "corporation": "Garrison Duty",
+    "special": "Diversionary Raid",
+    "covert": "Obervation",
+    "pirate": "Objective Raid"
+  },
+  {
+    "step": 11,
+    "inner_sphere_clan": "Cadre Duty",
+    "independent": "Cadre Duty",
+    "corporation": "Cadre Duty",
+    "special": "Riot Duty",
+    "covert": "Mole Hunting",
+    "pirate": "Objective Raid"
+  },
+  {
+    "step": 12,
+    "inner_sphere_clan": "Special",
+    "independent": "Special",
+    "corporation": "Special",
+    "special": "Cadre Duty",
+    "covert": "Security",
+    "pirate": "Objective Raid"
+  }
+]

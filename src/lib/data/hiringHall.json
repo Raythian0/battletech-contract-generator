@@ -31,6 +31,14 @@
             "Offers": 3,
             "employers": 2,
             "missions": 2
+        },
+        {
+            "id": "no_Hall",
+            "label": "No Hall",
+            "description": "No Hall",
+            "Offers": -3,
+            "employers": -2,
+            "missions": -2
         }
     ],
     "offersTable" : [

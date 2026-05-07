@@ -25,10 +25,11 @@
     <label>
       Hiring Hall
       <select bind:value={hiringHall}>
-        <option value={"questionable_Hall"}>Questionable Hall</option>
-        <option value={"minor_Hall"}>Minor Hall</option>
-        <option value={"standard_Hall"}>Standard Hall</option>
-        <option value={"great_Hall"}>Great Hall</option>
+        <option value="questionable_Hall">Questionable Hall</option>
+        <option value="minor_Hall">Minor Hall</option>
+        <option value="standard_Hall">Standard Hall</option>
+        <option value="great_Hall">Great Hall</option>
+        <option value="no_Hall">No Hall</option>
       </select>
     </label>
 
