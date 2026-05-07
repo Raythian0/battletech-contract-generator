@@ -4,11 +4,16 @@
   let scale = $state(1);
   let companyName = $state("Unknown Company");
   let maxContracts = $state(6);
+  let hiringHall = $state("Standard Hall");
+  let employerType = $state("Major Power");
 
   let contracts = $state(generateContracts());
 
+  let activeContractId = $state<string | null>(null);
+
   function regenerate() {
-    contracts = generateContracts(scale, companyName, maxContracts);
+    contracts = generateContracts(scale, companyName, employerType, maxContracts, hiringHall);
+    activeContractId = contracts.length > 0 ? contracts[0].id : null;
   }
 
 </script>
@@ -19,11 +24,11 @@
 
     <label>
       Hiring Hall
-      <select bind:value={maxContracts}>
-        <option value={0}>Questionable Hall</option>
-        <option value={1}>Minor Hall</option>
-        <option value={2}>Standard Hall</option>
-        <option value={3}>Great Hall</option>
+      <select bind:value={hiringHall}>
+        <option value={"questionable_Hall"}>Questionable Hall</option>
+        <option value={"minor_Hall"}>Minor Hall</option>
+        <option value={"standard_Hall"}>Standard Hall</option>
+        <option value={"great_Hall"}>Great Hall</option>
       </select>
     </label>
 
@@ -49,17 +54,30 @@
   </header>
 
   {#if contracts.length === 0}
-    <section class="empty-state">
-      <h2>No Contracts Available</h2>
-      <p>No suitable contracts are currently available. Check again later.</p>
-    </section>
-  {:else}
-            <section class="contract-list">
-            {#each contracts as contract}
-        <article class="contract-card">
-            <h2>{contract.title}</h2>
+  <section class="empty-state">
+    <h2>No Contracts Available</h2>
+    <p>No suitable contracts are currently available.</p>
+  </section>
+{:else}
+  <section class="tabs">
+    <div class="tab-buttons">
+      {#each contracts as contract, index}
+        <button
+          class:active={activeContractId === contract.id}
+          onclick={() => (activeContractId = contract.id)}
+        >
+          Contract {index + 1}
+        </button>
+      {/each}
+    </div>
 
-            <table>
+    {#each contracts as contract}
+      {#if activeContractId === contract.id}
+        <article class="contract-card">
+          <h2>{contract.title} - {contract.employer}</h2>
+
+          <!-- Put your existing table here -->
+          <table>
             <tbody>
                 <tr>
 
@@ -73,10 +91,10 @@
                 </tr>
 
                 <tr>
-                <th style="background-color: #e8e8e8;">Base Pay</th>
+                <th style="background-color: #e8e8e8;">Contract Pay</th>
                 <td><strong>{contract.terms.basePay.label}</strong><br /></td>
-                <td>Base: {500* contract.terms.basePay.value / 100} SP<br /></td>
-                <td>Scaled: {(500 * scale) * contract.terms.basePay.scaledValue / 100} SP</td>
+                <td>Base: {(500 * scale)* contract.terms.basePay.value / 100} SP<br /></td>
+                <td>Mission: {(500 * scale) * contract.terms.basePay.scaledValue / 100} SP</td>
                 </tr>
 
                 <tr>
@@ -105,40 +123,64 @@
             </tbody>
             </table>
         </article>
-        {/each}
-    </section>
-  {/if}
+      {/if}
+    {/each}
+  </section>
+{/if}
+
 </main>
 
 <style>
+  .tabs {
+    margin-top: 1rem;
+  }
+
+  .tab-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .tab-buttons button {
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #ccc;
+    background: #eee;
+    cursor: pointer;
+  }
+
+  .tab-buttons button.active {
+    background: #222;
+    color: white;
+    font-weight: bold;
+  }
+
   .contract-card {
     border: 1px solid #ccc;
     border-radius: 0.75rem;
     padding: 1rem;
     background: #f8f8f8;
-    margin-bottom: 1rem;
   }
 
   table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
   }
 
   th,
   td {
     border: 1px solid #ccc;
     padding: 0.75rem;
-    vertical-align: top;
     text-align: left;
+    vertical-align: top;
   }
 
   th {
     width: 220px;
-    background: #ffffff;
+    background: #e8e8e8;
   }
 
   td {
-    background: #ffffff;
+    background: white;
   }
 </style>
