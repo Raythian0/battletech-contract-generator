@@ -4,7 +4,8 @@
   let scale = $state(1);
   let companyName = $state("Unknown Company");
   let maxContracts = $state(6);
-  let hiringHall = $state("Standard Hall");
+  let hiringHall = $state("standard_Hall");
+  let campaignFocus = $state("general_Operations");
   let employerType = $state("Major Power");
 
   let contracts = $state(generateContracts());
@@ -30,6 +31,14 @@
         <option value="standard_Hall">Standard Hall</option>
         <option value="great_Hall">Great Hall</option>
         <option value="no_Hall">No Hall</option>
+      </select>
+    </label>
+
+    <label>
+      Campaign
+      <select bind:value={campaignFocus}>
+        <option value="general_Operations">General Operations</option>
+        <option value="hinterlands" disabled>Hinterlands</option>
       </select>
     </label>
 
@@ -67,7 +76,7 @@
           class:active={activeContractId === contract.id}
           onclick={() => (activeContractId = contract.id)}
         >
-          Contract {index + 1}
+          Contract {index + 1} {contract.missionType}
         </button>
       {/each}
     </div>
@@ -75,7 +84,7 @@
     {#each contracts as contract}
       {#if activeContractId === contract.id}
         <article class="contract-card">
-          <h2>{contract.title} - {contract.employer}</h2>
+          <h2>{contract.title} | {contract.specialMissionType} {contract.missionType} | {contract.employer}</h2>
 
           <!-- Put your existing table here -->
           <table>

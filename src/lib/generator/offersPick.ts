@@ -6,24 +6,17 @@ export type offerItem = {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
+  function clamp(value: number, min: number, max: number): number {
+  return Math.max(min, Math.min(value, max));
+  }
+
 export function offersPick<T extends offerItem>(items: T[], offerMod: number = 0): T {
   if (!items.length) {
     throw new Error("Cannot pick from an empty list.");
   }
 
   let offerRoll = randomIntFromInterval(2, 12) + offerMod;
-  if(offerRoll < 0)
-  {
-    offerRoll = 0;
-  }
-  else if(offerRoll > 13)
-  {
-    offerRoll = 13;
-  }
-  else
-  {
-
-  }
+  offerRoll = clamp(offerRoll, 0, 12)
 
   for (const item of items) {
 

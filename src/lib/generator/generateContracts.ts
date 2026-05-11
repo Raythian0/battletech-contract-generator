@@ -2,7 +2,9 @@ import { generateContractTerms } from "$lib/generator/generateContractTerms";
 import { hiringHallPick } from "$lib/generator/hiringHallPick";
 import { offersPick } from "$lib/generator/offersPick";
 import { employerPick } from "$lib/generator/employerPick";
+import { getMissionTypePick } from "$lib/generator/getMissionTypePick";
 import hiringHallData from "$lib/data/hiringHall.json"
+
 
 function randomInt(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -22,7 +24,7 @@ export function generateContracts(
   let employerId = "";
 
   return Array.from({ length: offers.offers }, (_, index) => {
-    const employer = employerPick(hiringHallData.employers, hall.employers)
+    const employer = employerPick(hiringHallData.employers, hall.employers) 
       if(employer.id == "independent")
       {
         const independentEmployer = employerPick(hiringHallData.independentEmployers, hall.employers)
@@ -34,6 +36,7 @@ export function generateContracts(
         employerType = employer.label;
         employerId = employer.id;
       }
+    const missionType = getMissionTypePick(hall.missions, employerId)
     const terms = generateContractTerms();
 
     return {
@@ -41,6 +44,8 @@ export function generateContracts(
       title: `Contract ${index + 1}`,
       company: companyName.trim(),
       employer: employerType.trim(),
+      missionType: missionType[0],
+      specialMissionType: missionType[1],
       scale,
       terms: {
         ...terms,
@@ -50,7 +55,7 @@ export function generateContracts(
         },
         transportationRights: {
           ...terms.transportationRights,
-          scaledValue: terms.transportationRights.value
+          scaledValue: terms.transportationRights.value * scale
             ? terms.transportationRights.value
             : 0
         }
