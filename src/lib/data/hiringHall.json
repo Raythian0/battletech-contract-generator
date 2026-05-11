@@ -31,49 +31,57 @@
             "Offers": 3,
             "employers": 2,
             "missions": 2
+        },
+        {
+            "id": "no_Hall",
+            "label": "No Hall",
+            "description": "No Hall",
+            "Offers": -3,
+            "employers": -2,
+            "missions": -2
         }
     ],
     "offersTable" : [
         {
             "id": "no_Offers",
             "label": "No Offers",
-            "Margin": [0],
+            "step": [0],
             "offers": 0
         },
         {
             "id": "one_Offer",
             "label": "One Offer",
-            "Margin": [1,2],
+            "step": [1,2],
             "offers": 1
         },
         {
             "id": "two_Offer",
             "label": "Two Offer",
-            "Margin": [3,4,5],
+            "step": [3,4,5],
             "offers": 2
         },
         {
             "id": "three_Offer",
             "label": "Three Offer",
-            "Margin": [6,7,8],
+            "step": [6,7,8],
             "offers": 3
         },
         {
             "id": "four_Offer",
             "label": "Four Offer",
-            "Margin": [9,10],
+            "step": [9,10],
             "offers": 4
         },
         {
             "id": "five_Offer",
             "label": "Five Offer",
-            "Margin": [9,10],
+            "step": [9,10],
             "offers": 5
         },
         {
             "id": "six_Offer",
             "label": "Six Offer",
-            "Margin": [13],
+            "step": [13],
             "offers": 6
         }
 
@@ -82,49 +90,49 @@
        {
             "id": "independent",
             "label": "Independent Worlds or Small State",
-            "margin": [2,3,4,5]
+            "step": [2,3,4,5]
         },
         {
             "id": "minor_Power",
             "label": "Minor Power",
-            "margin": [6,7]
+            "step": [6,7]
         },
         {
             "id": "major_Power",
             "label": "Major Power",
-            "margin": [8,9,10,11,12]
+            "step": [8,9,10,11,12]
         } 
     ],
     "independentEmployers":[
        {
             "id": "noble",
             "label": "Noble",
-            "margin": [2,3]
+            "step": [2,3]
         },
         {
             "id": "planetary_Government",
             "label": "Planetary Government",
-            "margin": [4,5]
+            "step": [4,5]
         },
         {
             "id": "mercenary",
             "label": "Mercenary",
-            "margin": [6]
+            "step": [6]
         },
         {
             "id": "major_Periphery_State",
             "label": "Major Periphery State",
-            "margin": [7,8]
+            "step": [7,8]
         },
         {
             "id": "minor_Periphery_State",
             "label": "Minor Periphery State",
-            "margin": [9,10]
+            "step": [9,10]
         },
         {
             "id": "corporation",
             "label": "Corporation",
-            "margin": [11,12]
+            "step": [11,12]
         }
     ]
 }
