@@ -37,7 +37,7 @@ export function generateContracts(
         employerId = employer.id;
       }
     const missionType = getMissionTypePick(hall.missions, employerId)
-    const terms = generateContractTerms();
+    const terms = generateContractTerms(missionType[0]);
 
     return {
       id: crypto.randomUUID(),

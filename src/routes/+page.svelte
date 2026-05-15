@@ -17,6 +17,10 @@
     activeContractId = contracts.length > 0 ? contracts[0].id : null;
   }
 
+  function exportPDF() {
+  window.print();
+  }
+
 </script>
 
 <main>
@@ -39,6 +43,7 @@
       <select bind:value={campaignFocus}>
         <option value="general_Operations">General Operations</option>
         <option value="hinterlands" disabled>Hinterlands</option>
+        <option value="draconisReach" disabled>Draconis Reach</option>
       </select>
     </label>
 
@@ -60,6 +65,10 @@
 
     <button onclick={regenerate}>
       Generate Contracts
+    </button>
+
+    <button onclick={exportPDF} disabled>
+      Export PDF
     </button>
   </header>
 
@@ -86,34 +95,46 @@
         <article class="contract-card">
           <h2>{contract.title} | {contract.specialMissionType} {contract.missionType} | {contract.employer}</h2>
 
-          <!-- Put your existing table here -->
+          <!-- Put your Terms table here -->
           <table>
             <tbody>
                 <tr>
 
                     <th style="background-color: #e8e8e8;">Company</th>
-                    <td>{contract.company}</td>
+                    <td>{companyName}</td>
 
-                    <td style="background-color: #e8e8e8;">Scale</td>
+                    <td style="background-color: #e8e8e8;"><strong>Scale</strong></td>
                     <td>{contract.scale}</td>
-
                     
                 </tr>
 
                 <tr>
-                <th style="background-color: #e8e8e8;">Contract Pay</th>
-                <td><strong>{contract.terms.basePay.label}</strong><br /></td>
-                <td>Base: {(500 * scale)* contract.terms.basePay.value / 100} SP<br /></td>
-                <td>Mission: {(500 * scale) * contract.terms.basePay.scaledValue / 100} SP</td>
+
+                    <th style="background-color: #e8e8e8;">Contract Length</th>
+                    <td>{contract.terms.baseLength} Months</td>
+
+                    <td style="background-color: #e8e8e8;"><strong>Transport Time</strong></td>
+                    <td>{contract.terms.transportTime} Month</td>
+
                 </tr>
 
                 <tr>
-                <th style="background-color: #e8e8e8;">Command Rights</th>
+
+                  <th style="background-color: #e8e8e8;">Contract Pay</th>
+                  <td><strong>{contract.terms.basePay.label}</strong><br /></td>
+
+                  <td style="background-color: #e8e8e8;"><strong>Base Pay</strong></td>
+                  <td>{(500 * scale)* contract.terms.basePay.value / 100} SP<br /></td>
+                
+                </tr>
+
+                <tr>
+                  <th style="background-color: #e8e8e8;"><strong>Command Rights</strong></th>
                 <td>
                     <strong>{contract.terms.commandRights.label}</strong><br />
                 </td>
 
-                <td style="background-color: #e8e8e8;">Salvage Rights</td>
+                <td style="background-color: #e8e8e8;"><strong>Salvage Rights</strong></td>
                 <td>
                     <strong>{contract.terms.salvageRights.label}</strong><br />
                     {contract.terms.salvageRights.description}
@@ -121,17 +142,41 @@
                 </tr>
 
                 <tr>
-                <th style="background-color: #e8e8e8;">Support Rights</th>
+                  <th style="background-color: #e8e8e8;">Support Rights</th>
                 <td>
                     <strong>{contract.terms.supportRights.label}</strong><br />
                 </td>
 
-                <td style="background-color: #e8e8e8;">Transportation Rights</td>
-                <td><strong>{contract.terms.transportationRights.label}</strong><br />
-                Final Cost: {(300 *scale) - ((300 * scale) * contract.terms.transportationRights.scaledValue/100)} SP</td>
+                <td style="background-color: #e8e8e8;"><strong>Transportation Rights</strong></td>
+                  <td><strong>{contract.terms.transportationRights.label}</strong><br />
+                  Final Cost: {(300 *scale) - ((300 * scale) * contract.terms.transportationRights.scaledValue/100)} SP</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #e8e8e8;"><strong>Mission Tempo</strong></td>
+                    <td>{contract.terms.tempoMultiplier}</td>
+                    <td style="background-color: #e8e8e8;"><strong>Combat Pay</strong></td>
+                    <td>{((500 * scale) * contract.terms.basePay.scaledValue / 100) * contract.terms.tempoMultiplier} SP</td>
                 </tr>
             </tbody>
-            </table>
+          </table>
+
+          <p></p>
+          <table>
+            <tbody>
+              <tr>
+
+                    <th style="background-color: #e8e8e8;">Scale OpFor BV</th>
+                    <td>{3000 * scale}</td>
+
+                    <td style="background-color: #e8e8e8;"><strong>Temp OpFor</strong></td>
+                    <td>{3000 * scale * contract.terms.tempoMultiplier}</td>
+                    
+                </tr>
+            </tbody>
+            <tbody>
+
+            </tbody>
+          </table>
         </article>
       {/if}
     {/each}
