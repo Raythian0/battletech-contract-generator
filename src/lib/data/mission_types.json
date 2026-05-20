@@ -6,7 +6,8 @@
     "Command Modifier": 2,
     "Salvage Modifier": 1,
     "Support Modifier": -1,
-    "Transport Modifier": -3
+    "Transport Modifier": -3,
+    "Track Modifier": [-2, 1]
   },
   {
     "Mission Type": "Cadre Duty",
@@ -15,7 +16,8 @@
     "Command Modifier": 0,
     "Salvage Modifier": 0,
     "Support Modifier": 1,
-    "Transport Modifier": 0
+    "Transport Modifier": 0,
+    "Track Modifier": [-2, 0]
   },
   {
     "Mission Type": "Diversionary Raid",
@@ -24,7 +26,8 @@
     "Command Modifier": 0,
     "Salvage Modifier": 2,
     "Support Modifier": 2,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [0, 0]
   },
   {
     "Mission Type": "Espionage",
@@ -33,7 +36,8 @@
     "Command Modifier": -1,
     "Salvage Modifier": -1,
     "Support Modifier": 2,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [1, 0]
   },
   {
     "Mission Type": "Extraction Raid",
@@ -42,7 +46,8 @@
     "Command Modifier": -1,
     "Salvage Modifier": -1,
     "Support Modifier": 2,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [1, 0]
   },
   {
     "Mission Type": "Garrison",
@@ -51,7 +56,8 @@
     "Command Modifier": 1,
     "Salvage Modifier": 0,
     "Support Modifier": 1,
-    "Transport Modifier": 0
+    "Transport Modifier": 0,
+    "Track Modifier": [-1, 0]
   },
   {
     "Mission Type": "Guerrilla",
@@ -60,7 +66,8 @@
     "Command Modifier": -2,
     "Salvage Modifier": 3,
     "Support Modifier": -2,
-    "Transport Modifier": -1
+    "Transport Modifier": -1,
+    "Track Modifier": [-1, 0]
   },
   {
     "Mission Type": "Mole Hunting",
@@ -69,7 +76,8 @@
     "Command Modifier": -3,
     "Salvage Modifier": 0,
     "Support Modifier": 2,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [2, 0]
   },
   {
     "Mission Type": "Objective Raid",
@@ -78,7 +86,8 @@
     "Command Modifier": -1,
     "Salvage Modifier": 0,
     "Support Modifier": 1,
-    "Transport Modifier": 2
+    "Transport Modifier": 2,
+    "Track Modifier": [0, 0]
   },
   {
     "Mission Type": "Observation Raid",
@@ -87,7 +96,8 @@
     "Command Modifier": -1,
     "Salvage Modifier": -1,
     "Support Modifier": 1,
-    "Transport Modifier": -1
+    "Transport Modifier": -1,
+    "Track Modifier": [-1, 0]
   },
   {
     "Mission Type": "Pirate Hunting",
@@ -96,7 +106,8 @@
     "Command Modifier": 2,
     "Salvage Modifier": 2,
     "Support Modifier": -1,
-    "Transport Modifier": -1
+    "Transport Modifier": -1,
+    "Track Modifier": [-2, 1]
   },
   {
     "Mission Type": "Planetary Assault",
@@ -105,7 +116,8 @@
     "Command Modifier": -2,
     "Salvage Modifier": 0,
     "Support Modifier": 2,
-    "Transport Modifier": 3
+    "Transport Modifier": 3,
+    "Track Modifier": [2, 0]
   },
   {
     "Mission Type": "Recon",
@@ -114,7 +126,8 @@
     "Command Modifier": -1,
     "Salvage Modifier": -1,
     "Support Modifier": 1,
-    "Transport Modifier": -1
+    "Transport Modifier": -1,
+    "Track Modifier": [0, 0]
   },
   {
     "Mission Type": "Relief Duty",
@@ -123,7 +136,8 @@
     "Command Modifier": -1,
     "Salvage Modifier": 1,
     "Support Modifier": 1,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [1, 0]
   },
   {
     "Mission Type": "Retainer",
@@ -132,7 +146,8 @@
     "Command Modifier": -2,
     "Salvage Modifier": 0,
     "Support Modifier": 2,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [1, 0]
   },
   {
     "Mission Type": "Riot Duty",
@@ -141,7 +156,8 @@
     "Command Modifier": -2,
     "Salvage Modifier": 1,
     "Support Modifier": 2,
-    "Transport Modifier": 0
+    "Transport Modifier": 0,
+    "Track Modifier": [0, 0]
   },
   {
     "Mission Type": "Sabotage",
@@ -150,7 +166,8 @@
     "Command Modifier": -1,
     "Salvage Modifier": 4,
     "Support Modifier": -3,
-    "Transport Modifier": -2
+    "Transport Modifier": -2,
+    "Track Modifier": [-1, 0]
   },
   {
     "Mission Type": "Security Duty",
@@ -159,7 +176,8 @@
     "Command Modifier": -3,
     "Salvage Modifier": 0,
     "Support Modifier": 2,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [0, 0]
   },
   {
     "Mission Type": "Terrorism",
@@ -168,6 +186,7 @@
     "Command Modifier": 2,
     "Salvage Modifier": 1,
     "Support Modifier": -1,
-    "Transport Modifier": -3
+    "Transport Modifier": -3,
+    "Track Modifier": [1, 0]
   }
 ]

@@ -161,6 +161,7 @@
           </table>
 
           <p></p>
+
           <table>
             <tbody>
               <tr>
@@ -173,10 +174,49 @@
                     
                 </tr>
             </tbody>
-            <tbody>
-
-            </tbody>
           </table>
+
+          {#if contract.tracks && contract.tracks.length > 0}
+            <section class="tracks-section">
+            <h3>Tracks</h3>
+
+            {#each contract.tracks as track, trackIndex}
+              <table class="track-table">
+                <caption>
+                  Track {trackIndex + 1}: {track.title}
+                </caption>
+
+                <tbody>
+                  <tr>
+                    <th>Type</th>
+                    <td>{track.type}</td>
+                  </tr>
+
+                  <tr>
+                    <th>Objective</th>
+                    <td>{track.objective}</td>
+                  </tr>
+
+                  <tr>
+                    <th>Reward</th>
+                    <td>{track.reward}</td>
+                  </tr>
+
+                  <tr>
+                    <th>Notes</th>
+                    <td>{track.notes}</td>
+                  </tr>
+                </tbody>
+              </table>
+            {/each}
+          </section>
+        {:else}
+          <section class="tracks-section">
+            <h3>Tracks</h3>
+            <p>No tracks generated for this contract.</p>
+          </section>
+        {/if}
+
         </article>
       {/if}
     {/each}
@@ -237,5 +277,19 @@
 
   td {
     background: white;
+  }
+
+  .tracks-section {
+  margin-top: 1.5rem;
+  }
+
+  .track-table {
+  margin-top: 1rem;
+  }
+
+  caption {
+  text-align: left;
+  font-weight: bold;
+  padding: 0.5rem 0;
   }
 </style>

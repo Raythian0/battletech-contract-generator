@@ -59,7 +59,23 @@ export function generateContracts(
             ? terms.transportationRights.value
             : 0
         }
-      }
+      },
+      tracks: [
+        {
+          title: "Track 1",
+          type: "Battle",
+          objective: "Destroy enemy sensor post",
+          reward: "100 SP",
+          notes: "Enemy reinforcements arrive on Turn 5"
+        },
+        {
+          title: "Track 2",
+          type: "Raid",
+          objective: "Recover battlefield data",
+          reward: "50 SP",
+          notes: "Optional objective"
+        }
+      ]
     };
   });
 }

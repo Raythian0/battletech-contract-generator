@@ -1,0 +1,12 @@
+{
+    "missionTracks":
+    [
+        {
+            "missionType": "",
+            "primaryTracks": [""],
+            "secondaryTracks": [""],
+            "trackRange": "",
+            "attk_Def_Mod": ""
+        }
+    ]
+}
