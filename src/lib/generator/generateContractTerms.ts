@@ -15,8 +15,7 @@ export function generateContractTerms(missionType : string = "Objective Raid") {
   let transportTimeMonths = Math.round(transportTimeWeeks/4)
   let baseLength = 3;
   let tempoMultiplier = 1;
-
-
+  
   for (const item of missionTypes) {
 
     if (item["Mission Type"] == missionType) {

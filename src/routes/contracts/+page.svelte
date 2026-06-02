@@ -14,8 +14,14 @@
   let activeContractId = $state<string | null>(null);
 
   function regenerate() {
+    console.log("***************")
+    console.log("STARTING GENERATING CONTRACTS")
+
     contracts = generateContracts(scale, companyName, employerType, maxContracts, hiringHall);
     activeContractId = contracts.length > 0 ? contracts[0].id : null;
+    
+    console.log("ENDING GENERATING CONTRACTS")
+    console.log("***************")
   }
 
   function exportPDF() {
@@ -193,28 +199,28 @@
             {#each contract.tracks as track, trackIndex}
               <table class="track-table">
                 <caption>
-                  Track {trackIndex + 1}: {track.title}
+                  Track {trackIndex + 1}: {track.track}
                 </caption>
 
                 <tbody>
                   <tr>
-                    <th>Type</th>
-                    <td>{track.type}</td>
+                    <th>Setup</th>
+                    <td>{track.setup}</td>
                   </tr>
 
                   <tr>
-                    <th>Objective</th>
-                    <td>{track.objective}</td>
+                    <th>Setup Attacker</th>
+                    <td>{track.setupAtt}</td>
                   </tr>
 
                   <tr>
-                    <th>Reward</th>
-                    <td>{track.reward}</td>
+                    <th>Setup Defender</th>
+                    <td>{track.setupDef}</td>
                   </tr>
 
                   <tr>
                     <th>Notes</th>
-                    <td>{track.notes}</td>
+                    <td>{track.Notes}</td>
                   </tr>
                 </tbody>
               </table>

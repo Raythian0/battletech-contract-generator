@@ -3,6 +3,7 @@ import { hiringHallPick } from "$lib/generator/hiringHallPick";
 import { offersPick } from "$lib/generator/offersPick";
 import { employerPick } from "$lib/generator/employerPick";
 import { getMissionTypePick } from "$lib/generator/getMissionTypePick";
+import { generateTracks } from "$lib/generator/generateTracks";
 import hiringHallData from "$lib/data/hiringHall.json"
 
 
@@ -24,6 +25,7 @@ export function generateContracts(
   let employerId = "";
 
   return Array.from({ length: offers.offers }, (_, index) => {
+    console.log("Generating Contract: " +index)
     const employer = employerPick(hiringHallData.employers, hall.employers) 
       if(employer.id == "independent")
       {
@@ -60,22 +62,7 @@ export function generateContracts(
             : 0
         }
       },
-      tracks: [
-        {
-          title: "Track 1",
-          type: "Battle",
-          objective: "Destroy enemy sensor post",
-          reward: "100 SP",
-          notes: "Enemy reinforcements arrive on Turn 5"
-        },
-        {
-          title: "Track 2",
-          type: "Raid",
-          objective: "Recover battlefield data",
-          reward: "50 SP",
-          notes: "Optional objective"
-        }
-      ]
+      tracks: generateTracks(missionType[0])
     };
   });
 }

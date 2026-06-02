@@ -12,7 +12,8 @@
             "primaryObjDef": "",
             "secondaryObjDef": "",
             "Notes": "",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": [""]
         },
         {
             "trackKey": "standup_Fight_TW",
@@ -25,7 +26,8 @@
             "primaryObjDef": "Each Attacker unit destroyed/crippled.",
             "secondaryObjDef": "",
             "Notes": "Inspired by Total Warfare book",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": ["Meeting Engagement"]
         },
         {
             "trackKey": "hide_and_seek_TW",
@@ -38,7 +40,8 @@
             "primaryObjDef": "Each Attacker unit destroyed/crippled.",
             "secondaryObjDef": "",
             "Notes": "Inspired by Total Warfare book",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": ["Meeting Engagement","Defend"]
         },
         {
             "trackKey": "extraction_TW",
@@ -51,7 +54,8 @@
             "primaryObjDef": "Each Attacker unit destroyed/crippled.",
             "secondaryObjDef": "Destroy/Cripple at Least 50 percent of the Attacker's force",
             "Notes": "Inspired by Total Warfare book",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": ["Objective Raid","Defend"]
         },
         {
             "trackKey": "breakthrough_TW",
@@ -64,7 +68,8 @@
             "primaryObjDef": "All Attacker's units Destroyed/crippled.",
             "secondaryObjDef": "Destroy/Cripple at Least 50 percent of the Attacker's force",
             "Notes": "Inspired by Total Warfare book",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": ["Breakthrough","Defend","Pursuit"]
         },
         {
             "trackKey": "chase_TW",
@@ -77,7 +82,8 @@
             "primaryObjDef": "All Attacker's units Destroyed/crippled.",
             "secondaryObjDef": "Destroy/Cripple at Least 50 percent of the Attacker's force",
             "Notes": "Inspired by Total Warfare book",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": ["Pursuit","Reteat"]
         },
         {       
             "trackKey": "defend_M",
@@ -90,7 +96,8 @@
             "primaryObjDef": "Destroy/Cripple at Least 75 percent of the Attacker's force",
             "secondaryObjDef": "At the end of Turn 8, have at least 50 percent of the Defender's unit survive and be in forced withdrawal and be within 4 hexes of the center line of the battlefield",
             "Notes": "See Mercenaries booklet for Full details",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": ["Defend","Strike"]
         },
         {
             "trackKey": "meeting_Engagement_M",
@@ -103,7 +110,8 @@
             "primaryObjDef": "The first team that destroys or cripples half of the opponent's force. Units that voluntarily withdraw from the map count as destroyed or crippled for this objective.",
             "secondaryObjDef": "",
             "Notes": "See Mercenaries booklet for Full details",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": ["Meeting Engagement"]
         },
         {
             "trackKey": "strike_M",
@@ -116,7 +124,8 @@
             "primaryObjDef": "Destroy/Cripple the enemy Commander.",
             "secondaryObjDef": "Destroy/ Cripple at least 50 percent of the opponent's force.",
             "Notes": "See Mercenaries booklet for Full details",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": ["Strike","Recon"]
         },
         {
             "trackKey": "objective_Raid_M",
@@ -129,7 +138,8 @@
             "primaryObjDef": "Each Attacker unit destroyed/crippled.",
             "secondaryObjDef": "",
             "Notes": "See Mercenaries booklet for Full details",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": ["Objective Raid"]
         },
         {
             "trackKey": "probe_CO",
@@ -142,7 +152,8 @@
             "primaryObjDef": "Have less percent destroyed/crippled units than Attacker.",
             "secondaryObjDef": "Destroy/Cripple at Least 50 percent of the Attacker's force",
             "Notes": "Mission inspired by Campaign Operations book",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": ["Recon"]
         },
         {
             "trackKey": "recon_Raid_CO",
@@ -155,7 +166,8 @@
             "primaryObjDef": "Each Attacker unit destroyed/crippled.",
             "secondaryObjDef": "",
             "Notes": "Mission inspired by Campaign Operations book",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": ["Recon","Defend"]
         },
         {
             "trackKey": "base_Attack_CO",
@@ -168,7 +180,8 @@
             "primaryObjDef": "Each Attacker unit destroyed/crippled.",
             "secondaryObjDef": "No more than 3 structures destroyed",
             "Notes": "Mission inspired by Campaign Operations book",
-            "stepMod": 0
+            "stepMod": 0,
+            "trackCategory": ["Defend","Strike"]
         }
     ]
 }
