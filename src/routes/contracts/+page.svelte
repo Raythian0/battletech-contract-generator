@@ -219,6 +219,26 @@
                   </tr>
 
                   <tr>
+                    <th>Attacker Primary Objective</th>
+                    <td>{track.primaryObjAttk}</td>
+                  </tr>
+                {#if track.secondaryObjAttk != ""}
+                  <tr>
+                    <th>Attacker Secondary Objective</th>
+                    <td>{track.secondaryObjAttk}</td>
+                  </tr>
+                {/if}
+                  <tr>
+                    <th>Defender Primary Objective</th>
+                    <td>{track.primaryObjDef}</td>
+                  </tr>
+                {#if track.secondaryObjDef != ""}
+                  <tr>
+                    <th>Defender Secondary Objective</th>
+                    <td>{track.secondaryObjDef}</td>
+                  </tr>
+                {/if}
+                  <tr>
                     <th>Notes</th>
                     <td>{track.Notes}</td>
                   </tr>
