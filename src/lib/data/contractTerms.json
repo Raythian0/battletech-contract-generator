@@ -5,7 +5,7 @@
       "label": "Base Pay 50% (1)",
       "description": "Base Pay 50%",
       "value": 50,
-      "step": 1,
+      "step": [1],
       "weight": 1
     },
     {
@@ -13,7 +13,7 @@
       "label": "Base Pay 55% (2)",
       "description": "Base Pay 55%",
       "value": 55,
-      "step": 2,
+      "step": [2],
       "weight": 1
     },
     {
@@ -21,7 +21,7 @@
       "label": "Base Pay 60% (3)",
       "description": "Base Pay 60%",
       "value": 60,
-      "step": 3,
+      "step": [3],
       "weight": 1
     },
     {
@@ -29,7 +29,7 @@
       "label": "Base Pay 70% (4)",
       "description": "Base Pay 70%",
       "value": 70,
-      "step": 4,
+      "step": [4],
       "weight": 1
     },
     {
@@ -37,7 +37,7 @@
       "label": "Base Pay 80% (5)",
       "description": "Base Pay 80%",
       "value": 80,
-      "step": 5,
+      "step": [5],
       "weight": 1
     },
     {
@@ -45,7 +45,7 @@
       "label": "Base Pay 90% (6)",
       "description": "Base Pay 90%",
       "value": 90,
-      "step": 6,
+      "step": [6],
       "weight": 1
     },
     {
@@ -53,7 +53,7 @@
       "label": "Base Pay 100% (7)",
       "description": "Base Pay 100%",
       "value": 100,
-      "step": 7,
+      "step": [7],
       "weight": 1
     },
     {
@@ -61,7 +61,7 @@
       "label": "Base Pay 110% (8)",
       "description": "Base Pay 110%",
       "value": 110,
-      "step": 8,
+      "step": [8],
       "weight": 1
     },
     {
@@ -69,7 +69,7 @@
       "label": "Base Pay 120% (9)",
       "description": "Base Pay 120%",
       "value": 120,
-      "step": 9,
+      "step": [9],
       "weight": 1
     },
     {
@@ -77,7 +77,7 @@
       "label": "Base Pay 130% (10)",
       "description": "Base Pay 130%",
       "value": 130,
-      "step": 10,
+      "step": [10],
       "weight": 1
     },
     {
@@ -85,7 +85,7 @@
       "label": "Base Pay 150% (11)",
       "description": "Base Pay 150%",
       "value": 150,
-      "step": 11,
+      "step": [11],
       "weight": 1
     },
     {
@@ -93,7 +93,7 @@
       "label": "Base Pay 175% (12)",
       "description": "Base Pay 175%",
       "value": 175,
-      "step": 12,
+      "step": [12],
       "weight": 1
     },
     {
@@ -101,35 +101,35 @@
       "label": "Base Pay 200% (13)",
       "description": "Base Pay 200%",
       "value": 200,
-      "step": 13,
+      "step": [13],
       "weight": 1
     }
   ],
   "commandRights": [
     {
       "id": "integrated",
-      "label": "Integrated",
+      "label": "Integrated (3)",
       "description": "Integrated",
-      "step": [1,2,3],
+      "step": [1,2,3,4,5],
       "weight": 3
     },
     {
       "id": "house",
-      "label": "House",
+      "label": "House (7)",
       "description": "House",
-      "step": [4,5,6,7],
+      "step": [6,7],
       "weight": 4
     },
     {
       "id": "liaison",
-      "label": "Liaison",
+      "label": "Liaison (8)",
       "description": "Liaison",
       "step": [8,9,10],
       "weight": 3
     },
     {
       "id": "independant",
-      "label": "Independant",
+      "label": "Independant (11)",
       "description": "Independant",
       "step": [11,12,13],
       "weight": 3
@@ -327,7 +327,7 @@
       "label": "Transport 0% (1)",
       "description": "",
       "value": 0,
-      "step": 1,
+      "step": [1],
       "weight": 1
     },
     {
@@ -335,7 +335,7 @@
       "label": "Transport 0% (2)",
       "description": "",
       "value": 0,
-      "step": 2,
+      "step": [2],
       "weight": 1
     },
     {
@@ -343,7 +343,7 @@
       "label": "Transport 0% (3)",
       "description": "",
       "value": 0,
-      "step": 3,
+      "step": [3],
       "weight": 1
     },
     {
@@ -351,7 +351,7 @@
       "label": "Transport 0% (4)",
       "description": "",
       "value": 0,
-      "step": 4,
+      "step": [4],
       "weight": 1
     },
     {
@@ -359,7 +359,7 @@
       "label": "Transport 0% (5)",
       "description": "",
       "value": 0,
-      "step": 5,
+      "step": [5],
       "weight": 1
     },
     {
@@ -367,7 +367,7 @@
       "label": "Transport 25% (6)",
       "description": "",
       "value": 25,
-      "step": 6,
+      "step": [6],
       "weight": 1
     },
     {
@@ -375,7 +375,7 @@
       "label": "Transport 50% (7)",
       "description": "",
       "value": 50,
-      "step": 7,
+      "step": [7],
       "weight": 1
     },
     {
@@ -383,7 +383,7 @@
       "label": "Transport 75% (8)",
       "description": "",
       "value": 75,
-      "step": 8,
+      "step": [8],
       "weight": 1
     },
     {
@@ -391,7 +391,7 @@
       "label": "Transport 100% (9)",
       "description": "",
       "value": 100,
-      "step": 9,
+      "step": [9],
       "weight": 1
     },
     {
@@ -399,7 +399,7 @@
       "label": "Transport 100% (10)",
       "description": "",
       "value": 100,
-      "step": 10,
+      "step": [10],
       "weight": 1
     },
     {
@@ -407,7 +407,7 @@
       "label": "Transport 100% (11)",
       "description": "",
       "value": 100,
-      "step": 11,
+      "step": [11],
       "weight": 1
     },
     {
@@ -415,7 +415,7 @@
       "label": "Transport 100% (12)",
       "description": "",
       "value": 100,
-      "step": 12,
+      "step": [12],
       "weight": 1
     },
     {
@@ -423,7 +423,7 @@
       "label": "Transport 100% (13)",
       "description": "",
       "value": 100,
-      "step": 13,
+      "step": [13],
       "weight": 1
     }
   ]

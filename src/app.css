@@ -1,0 +1,14 @@
+@media print {
+  button {
+    display: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  .contract-card {
+    page-break-inside: avoid;
+    border: 1px solid black;
+  }
+}

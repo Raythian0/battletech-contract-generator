@@ -3,6 +3,7 @@ import { hiringHallPick } from "$lib/generator/hiringHallPick";
 import { offersPick } from "$lib/generator/offersPick";
 import { employerPick } from "$lib/generator/employerPick";
 import { getMissionTypePick } from "$lib/generator/getMissionTypePick";
+import { generateTracks } from "$lib/generator/generateTracks";
 import hiringHallData from "$lib/data/hiringHall.json"
 
 
@@ -24,6 +25,7 @@ export function generateContracts(
   let employerId = "";
 
   return Array.from({ length: offers.offers }, (_, index) => {
+    console.log("Generating Contract: " +index)
     const employer = employerPick(hiringHallData.employers, hall.employers) 
       if(employer.id == "independent")
       {
@@ -37,7 +39,7 @@ export function generateContracts(
         employerId = employer.id;
       }
     const missionType = getMissionTypePick(hall.missions, employerId)
-    const terms = generateContractTerms();
+    const terms = generateContractTerms(missionType[0]);
 
     return {
       id: crypto.randomUUID(),
@@ -59,7 +61,8 @@ export function generateContracts(
             ? terms.transportationRights.value
             : 0
         }
-      }
+      },
+      tracks: generateTracks(missionType[0])
     };
   });
 }

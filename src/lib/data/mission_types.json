@@ -6,7 +6,10 @@
     "Command Modifier": 2,
     "Salvage Modifier": 1,
     "Support Modifier": -1,
-    "Transport Modifier": -3
+    "Transport Modifier": -3,
+    "Track Modifier": [-2, 1],
+    "Track Category": ["Assassination","Recon","Strike"],
+    "attk_Def_Mod": 3
   },
   {
     "Mission Type": "Cadre Duty",
@@ -15,7 +18,10 @@
     "Command Modifier": 0,
     "Salvage Modifier": 0,
     "Support Modifier": 1,
-    "Transport Modifier": 0
+    "Transport Modifier": 0,
+    "Track Modifier": [-2, 0],
+    "Track Category": ["Defend","Strike","Meeting Engagement"],
+    "attk_Def_Mod": -1
   },
   {
     "Mission Type": "Diversionary Raid",
@@ -24,7 +30,10 @@
     "Command Modifier": 0,
     "Salvage Modifier": 2,
     "Support Modifier": 2,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [0, 0],
+    "Track Category": ["Objective Raid","Recon", "Strike"],
+    "attk_Def_Mod": 1
   },
   {
     "Mission Type": "Espionage",
@@ -33,7 +42,10 @@
     "Command Modifier": -1,
     "Salvage Modifier": -1,
     "Support Modifier": 2,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [1, 0],
+    "Track Category": ["Strike", "Recon","Objective Raid", "Pursuit"],
+    "attk_Def_Mod": 2
   },
   {
     "Mission Type": "Extraction Raid",
@@ -42,7 +54,10 @@
     "Command Modifier": -1,
     "Salvage Modifier": -1,
     "Support Modifier": 2,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [1, 0],
+    "Track Category": ["Objective Raid","Strike","Assault"],
+    "attk_Def_Mod": 1
   },
   {
     "Mission Type": "Garrison",
@@ -51,7 +66,10 @@
     "Command Modifier": 1,
     "Salvage Modifier": 0,
     "Support Modifier": 1,
-    "Transport Modifier": 0
+    "Transport Modifier": 0,
+    "Track Modifier": [-1, 0],
+    "Track Category": ["Defend","Meeting Engagement", "Pushback"],
+    "attk_Def_Mod": -3
   },
   {
     "Mission Type": "Guerrilla",
@@ -60,7 +78,10 @@
     "Command Modifier": -2,
     "Salvage Modifier": 3,
     "Support Modifier": -2,
-    "Transport Modifier": -1
+    "Transport Modifier": -1,
+    "Track Modifier": [-1, 0],
+    "Track Category": ["Strike","Breakthrough", "Recon"],
+    "attk_Def_Mod": 2
   },
   {
     "Mission Type": "Mole Hunting",
@@ -69,7 +90,10 @@
     "Command Modifier": -3,
     "Salvage Modifier": 0,
     "Support Modifier": 2,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [2, 0],
+    "Track Category": ["Recon","Strike","Meeting Engagement"],
+    "attk_Def_Mod": 2
   },
   {
     "Mission Type": "Objective Raid",
@@ -78,7 +102,10 @@
     "Command Modifier": -1,
     "Salvage Modifier": 0,
     "Support Modifier": 1,
-    "Transport Modifier": 2
+    "Transport Modifier": 2,
+    "Track Modifier": [0, 0],
+    "Track Category": ["Objective Raid","Recon","Breakthrough"],
+    "attk_Def_Mod": 2
   },
   {
     "Mission Type": "Observation Raid",
@@ -87,7 +114,10 @@
     "Command Modifier": -1,
     "Salvage Modifier": -1,
     "Support Modifier": 1,
-    "Transport Modifier": -1
+    "Transport Modifier": -1,
+    "Track Modifier": [-1, 0],
+    "Track Category": ["Objective Raid","Recon","Retreat"],
+    "attk_Def_Mod": 1
   },
   {
     "Mission Type": "Pirate Hunting",
@@ -96,7 +126,10 @@
     "Command Modifier": 2,
     "Salvage Modifier": 2,
     "Support Modifier": -1,
-    "Transport Modifier": -1
+    "Transport Modifier": -1,
+    "Track Modifier": [-2, 1],
+    "Track Category": ["Objective Raid","Recon","Meeting Engagement"],
+    "attk_Def_Mod": 2
   },
   {
     "Mission Type": "Planetary Assault",
@@ -105,7 +138,10 @@
     "Command Modifier": -2,
     "Salvage Modifier": 0,
     "Support Modifier": 2,
-    "Transport Modifier": 3
+    "Transport Modifier": 3,
+    "Track Modifier": [2, 0],
+    "Track Category": ["Assault","Breakthrough","Meeting Engagement","Strike"],
+    "attk_Def_Mod": 0
   },
   {
     "Mission Type": "Recon",
@@ -114,7 +150,10 @@
     "Command Modifier": -1,
     "Salvage Modifier": -1,
     "Support Modifier": 1,
-    "Transport Modifier": -1
+    "Transport Modifier": -1,
+    "Track Modifier": [0, 0],
+    "Track Category": ["Recon","Strike","Retreat"],
+    "attk_Def_Mod": 1
   },
   {
     "Mission Type": "Relief Duty",
@@ -123,7 +162,10 @@
     "Command Modifier": -1,
     "Salvage Modifier": 1,
     "Support Modifier": 1,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [1, 0],
+    "Track Category": ["Defend","Breakthrough","Pushback"],
+    "attk_Def_Mod": -1
   },
   {
     "Mission Type": "Retainer",
@@ -132,7 +174,10 @@
     "Command Modifier": -2,
     "Salvage Modifier": 0,
     "Support Modifier": 2,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [1, 0],
+    "Track Category": ["Defend","Meeting Engagement"],
+    "attk_Def_Mod": 0
   },
   {
     "Mission Type": "Riot Duty",
@@ -141,7 +186,10 @@
     "Command Modifier": -2,
     "Salvage Modifier": 1,
     "Support Modifier": 2,
-    "Transport Modifier": 0
+    "Transport Modifier": 0,
+    "Track Modifier": [0, 0],
+    "Track Category": ["Pushback","Pursuit","Strike"],
+    "attk_Def_Mod": -2
   },
   {
     "Mission Type": "Sabotage",
@@ -150,7 +198,10 @@
     "Command Modifier": -1,
     "Salvage Modifier": 4,
     "Support Modifier": -3,
-    "Transport Modifier": -2
+    "Transport Modifier": -2,
+    "Track Modifier": [-1, 0],
+    "Track Category": ["Objective Raid","Strike","Recon"],
+    "attk_Def_Mod": 1
   },
   {
     "Mission Type": "Security Duty",
@@ -159,7 +210,10 @@
     "Command Modifier": -3,
     "Salvage Modifier": 0,
     "Support Modifier": 2,
-    "Transport Modifier": 1
+    "Transport Modifier": 1,
+    "Track Modifier": [0, 0],
+    "Track Category": ["Defend","Pursuit", "Flank"],
+    "attk_Def_Mod": -2
   },
   {
     "Mission Type": "Terrorism",
@@ -168,6 +222,9 @@
     "Command Modifier": 2,
     "Salvage Modifier": 1,
     "Support Modifier": -1,
-    "Transport Modifier": -3
+    "Transport Modifier": -3,
+    "Track Modifier": [1, 0],
+    "Track Category": ["Strike","Assault","Breakthrough","Objective Raid"],
+    "attk_Def_Mod": 2
   }
 ]
