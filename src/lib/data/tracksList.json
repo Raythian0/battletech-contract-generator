@@ -177,11 +177,25 @@
             "setupDef": "The Defender begins the track with all units in the playing area. At least half of the Defender's force must be within 6 hexes of the designated buildings.",
             "primaryObjAttk": "Destroy all Structures",
             "secondaryObjAttk": "Destroy 7 Structures",
-            "primaryObjDef": "Each Attacker unit destroyed/crippled.",
+            "primaryObjDef": "Each Attacker unit destroyed/crippled",
             "secondaryObjDef": "No more than 3 structures destroyed",
             "Notes": "Mission inspired by Campaign Operations book",
             "stepMod": 0,
             "trackCategory": ["Defend","Strike"]
+        },
+        {
+            "trackKey": "assassinate_CS",
+            "track": "Assassinate",
+            "setup": "Defending player may chose a additional mech as their High Value Target (HVT). This extra unit is based on the average Tonnage or BV of their force (mechs and Vehicles). The HVT is not effected by Force Withdrawal, has a skill of Piloting 5 and Gunnery 4, will not eject and may not leave the field of battle.",
+            "setupAtt": "Attacker deploys within 3 hexes of their Home Edge",
+            "setupDef": "Defender picks their Home Edge. The force and their High Value Target (HVT) deploy within 3 hexes of their Home Edge",
+            "primaryObjAttk": "Destroyed High Value Target",
+            "secondaryObjAttk": "Destroy/Cripple at Least 50 percent of the Defenders's force",
+            "primaryObjDef": "Destroy/Cripple at Least 75 percent of the Attacker's force",
+            "secondaryObjDef": "Destroy/Cripple Attacker's Commander/Unit with highest BV",
+            "Notes": "Mission Inspired by Comstar blog",
+            "stepMod": 0,
+            "trackCategory": ["Assassination"]
         }
     ]
 }

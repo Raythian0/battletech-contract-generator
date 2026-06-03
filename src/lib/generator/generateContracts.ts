@@ -28,7 +28,7 @@ export function generateContracts(
   let employerId = "";
 
   return Array.from({ length: offers.offers }, (_, index) => {
-    console.log("Generating Contract: " +index)
+    console.log('Generating Contract: '+index)
     const employer = employerPick(hiringHallData.employers, hall.employers) 
       if(employer.id == "independent")
       {
@@ -43,9 +43,6 @@ export function generateContracts(
       }
     const missionType = getMissionTypePick(hall.missions, employerId)
     const terms = generateContractTerms(missionType[0]);
-
-    console.log("ENDING GENERATING CONTRACTS")
-    console.log("***************")
 
     return {
       id: crypto.randomUUID(),
@@ -72,5 +69,6 @@ export function generateContracts(
     };
     
   });
-
+    console.log("ENDING GENERATING CONTRACTS")
+    console.log("***************")
 }
