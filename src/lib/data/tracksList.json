@@ -94,7 +94,7 @@
             "primaryObjAttk": "Destroy/Cripple at Least 75 percent of the Defender's force",
             "secondaryObjAttk": "Destroy/Cripple the enemy commander's unit",
             "primaryObjDef": "Destroy/Cripple at Least 75 percent of the Attacker's force",
-            "secondaryObjDef": "At the end of Turn 8, have at least 50 percent of the Defender's unit survive and be in forced withdrawal and be within 4 hexes of the center line of the battlefield",
+            "secondaryObjDef": "At the end of Turn 8, have at least 50 percent of the Defender's unit survive and be within 4 hexes of the center line of the battlefield",
             "Notes": "See Mercenaries booklet for Full details",
             "stepMod": 0,
             "trackCategory": ["Defend","Strike"]

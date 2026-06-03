@@ -14,14 +14,10 @@
   let activeContractId = $state<string | null>(null);
 
   function regenerate() {
-    console.log("***************")
-    console.log("STARTING GENERATING CONTRACTS")
 
     contracts = generateContracts(scale, companyName, employerType, maxContracts, hiringHall);
     activeContractId = contracts.length > 0 ? contracts[0].id : null;
     
-    console.log("ENDING GENERATING CONTRACTS")
-    console.log("***************")
   }
 
   function exportPDF() {
@@ -35,7 +31,7 @@
 </script>
 
 <main>
-    <button onclick={openHome}>
+    <button class="navigateButtons" onclick={openHome}>
       Homepage
     </button>
 
@@ -79,11 +75,11 @@
         />
     </label>
 
-    <button onclick={regenerate}>
+    <button class="interactButton" onclick={regenerate}>
       Generate Contracts
     </button>
 
-    <button onclick={exportPDF} disabled>
+    <button class="interactButton" onclick={exportPDF} disabled>
       Export PDF
     </button>
   </header>
@@ -262,8 +258,33 @@
 </main>
 
 <style>
+  :global(html)
+  {
+    background: #222;
+    color: whitesmoke;
+  }
+
+  .navigateButtons{
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #ccc;
+    background: #c89b3c;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  .interactButton{
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #ccc;
+    background: #c89b3c;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+  }
+
   .tabs {
     margin-top: 1rem;
+    color: whitesmoke;
   }
 
   .tab-buttons {
@@ -271,31 +292,44 @@
     gap: 0.5rem;
     flex-wrap: wrap;
     margin-bottom: 1rem;
+    border: none;
+    border-radius: 0.5rem;
   }
 
   .tab-buttons button {
     padding: 0.5rem 0.9rem;
     border: 1px solid #ccc;
-    background: #eee;
+    background: #c89c3c;
     cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  button:hover {
+    background: #ddb85f;
+    border: none;
   }
 
   .tab-buttons button.active {
     background: #222;
     color: white;
     font-weight: bold;
+    border: 1px solid white;
+    border-radius: 0.5rem;
   }
 
   .contract-card {
     border: 1px solid #ccc;
     border-radius: 0.75rem;
     padding: 1rem;
-    background: #f8f8f8;
+    background: #222;
+    color: white;
   }
 
   table {
     width: 100%;
     border-collapse: collapse;
+    color: white;
   }
 
   th,
@@ -304,28 +338,34 @@
     padding: 0.75rem;
     text-align: left;
     vertical-align: top;
+    background: #c89b3c;
   }
 
   th {
     width: 220px;
-    background: #e8e8e8;
+    background: #c89b3c;
+    color: black;
   }
 
   td {
     background: white;
+    color: black;
   }
 
   .tracks-section {
   margin-top: 1.5rem;
+  color: white;
   }
 
   .track-table {
   margin-top: 1rem;
+  color: black;
   }
 
   caption {
   text-align: left;
   font-weight: bold;
   padding: 0.5rem 0;
+  color: white;
   }
 </style>

@@ -18,6 +18,9 @@ export function generateContracts(
   maxContracts: number = 6,
   hiringHall: string = "standard_Hall") {
 
+  console.log("***************")
+  console.log("STARTING GENERATING CONTRACTS")
+
   const contractCount = randomInt(0, maxContracts);
 
   const hall = hiringHallPick(hiringHallData.hiringHall, hiringHall)
@@ -40,6 +43,9 @@ export function generateContracts(
       }
     const missionType = getMissionTypePick(hall.missions, employerId)
     const terms = generateContractTerms(missionType[0]);
+
+    console.log("ENDING GENERATING CONTRACTS")
+    console.log("***************")
 
     return {
       id: crypto.randomUUID(),
@@ -64,5 +70,7 @@ export function generateContracts(
       },
       tracks: generateTracks(missionType[0])
     };
+    
   });
+
 }
